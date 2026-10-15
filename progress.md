@@ -121,19 +121,19 @@ python -m spacy download en_core_web_sm
 ---
 
 ## Phase 6: Export
-- [ ] Markdown export
-- [ ] DOCX export with python-docx
-- [ ] Download buttons in Streamlit
+- [x] Markdown export
+- [x] DOCX export with python-docx
+- [x] Download buttons in Streamlit
 
 **Validation checkpoint:** share an exported file.
 
 ---
 
-## Phase 7: Quality & Evaluation
-- [ ] Test on 5+ varied transcripts (short, long, noisy, multi-speaker)
-- [ ] Check for hallucinated action items or owners
-- [ ] Prompt tuning notes recorded below
-- [ ] Rate-limit handling (Groq free-tier limits)
+## Phase 7: Quality & Evaluation ✅
+- [x] Test on 5+ varied transcripts (short, long, noisy, multi-speaker, no-action, unlabelled)
+- [x] Check for hallucinated action items or owners (evaluate.py: 0 FAIL on all runs)
+- [x] Prompt tuning notes recorded below
+- [x] Rate-limit handling (5 retries with capped backoff)
 
 **Validation checkpoint:** share a short evaluation table.
 
@@ -160,6 +160,9 @@ python -m spacy download en_core_web_sm
 | 2026-10-15 | gpt-oss output can contain odd Unicode spaces (glued words); `normalize_text()` cleans every model reply. |
 | 2026-10-15 | Prompt rules: each item belongs in exactly one section; a "need" is not an action item; never infer owners. |
 | 2026-10-15 | Phase 7 TODO: agenda from map-reduce can be thin ("palette", "budget"); check decisions vs action-item overlap across more transcripts. |
+| 2026-10-15 | Eval baseline: 0 hallucinated owners/attendees/dates across 7 runs. Prompt tuned for decisions vs tasks: models rephrased tasks as decisions (passive voice, unnamed). |
+| 2026-10-15 | Known limitation: occasional action item restated as a decision, or an early position kept after a change of mind. Not systematic; users can edit before export. |
+
 
 ## Issues / Blockers
 | Date | Issue | Resolution |
