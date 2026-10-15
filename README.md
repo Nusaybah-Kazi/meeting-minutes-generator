@@ -4,7 +4,7 @@ Turn a meeting transcript or recording into structured minutes: summary, decisio
 action items with owners and due dates, and open questions. Edit the result, then
 export to Markdown or Word.
 
-**Live demo:** <add URL after deployment>
+**Live demo:**https://meeting-minutes-generator-jycjjfar4kk8zgat8j29bu.streamlit.app/
 
 ## How it works
 1. **Input:** audio (Groq Whisper) or text/.docx/.vtt/.srt, or pasted text.

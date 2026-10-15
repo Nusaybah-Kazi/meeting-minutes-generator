@@ -139,10 +139,10 @@ python -m spacy download en_core_web_sm
 
 ---
 
-## Phase 8: Deploy & Docs
-- [ ] README with setup, screenshots, usage
-- [ ] Deploy on Streamlit Community Cloud (GitHub login, add `GROQ_API_KEY` in Secrets)
-- [ ] Final repo cleanup, tag `v1.0`
+## Phase 8: Deploy & Docs ✅
+- [x] README with setup, usage, limitations
+- [x] Deploy on Streamlit Community Cloud (GitHub login, `GROQ_API_KEY` in Secrets)
+- [x] Final repo cleanup, tag `v1.0`
 
 **Validation checkpoint:** share the live app URL.
 
@@ -162,7 +162,7 @@ python -m spacy download en_core_web_sm
 | 2026-10-15 | Phase 7 TODO: agenda from map-reduce can be thin ("palette", "budget"); check decisions vs action-item overlap across more transcripts. |
 | 2026-10-15 | Eval baseline: 0 hallucinated owners/attendees/dates across 7 runs. Prompt tuned for decisions vs tasks: models rephrased tasks as decisions (passive voice, unnamed). |
 | 2026-10-15 | Known limitation: occasional action item restated as a decision, or an early position kept after a change of mind. Not systematic; users can edit before export. |
-
+| 2026-10-15 | v1.0 released. spaCy model installed from a wheel URL in requirements.txt for cloud builds; API key read from .env locally and st.secrets on cloud. |
 
 ## Issues / Blockers
 | Date | Issue | Resolution |
