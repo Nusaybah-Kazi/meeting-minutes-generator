@@ -79,22 +79,22 @@ python -m spacy download en_core_web_sm
 
 ---
 
-## Phase 2: Transcript Ingestion
-- [ ] Add 2-3 sample transcripts in `samples/` (short, medium, messy)
-- [ ] `ingest.py`: read `.txt`, `.docx`, `.vtt`/`.srt`
-- [ ] `transcribe.py`: audio -> text with Groq Whisper (handle the 25 MB free-tier file limit)
-- [ ] Unit tests for ingest
+## Phase 2: Transcript Ingestion ✅
+- [x] Add 2-3 sample transcripts in `samples/` (short, medium, messy)
+- [x] `ingest.py`: read `.txt`, `.docx`, `.vtt`/`.srt`
+- [x] `transcribe.py`: audio -> text with Groq Whisper (handle the 25 MB free-tier file limit)
+- [x] Unit tests for ingest
 
 **Validation checkpoint:** `pytest` output + a sample transcript printed.
 
 ---
 
-## Phase 3: NLP Preprocessing
-- [ ] Clean text (filler words, timestamps, whitespace)
-- [ ] Detect speaker labels (`Alice: ...`)
-- [ ] Chunk long transcripts by tokens/characters with overlap
-- [ ] spaCy NER: extract people, organizations, dates
-- [ ] Unit tests for cleaning, chunking, entities
+## Phase 3: NLP Preprocessing ✅
+- [x] Clean text (filler words, timestamps, whitespace)
+- [x] Detect speaker labels (`Alice: ...`)
+- [x] Chunk long transcripts by tokens/characters with overlap
+- [x] spaCy NER: extract people, organizations, dates
+- [x] Unit tests for cleaning, chunking, entities
 
 **Validation checkpoint:** show chunk counts and extracted entities for a sample.
 
@@ -157,6 +157,8 @@ python -m spacy download en_core_web_sm
 | 2026-10-15 | Switched from conda to uv for the environment (conda env had no pip, so installs fell back to system Python 3.9). Python 3.11 via `uv venv`. |
 | 2026-10-15 | Always install with `uv pip install ...` or `python -m pip install ...`, never bare `pip`. |
 | 2026-10-15 | Groq retires models often, so model names live only in `src/config.py`. Run `python list_models.py` if a 404 appears. |
+| 2026-10-15 | Whisper output has no speaker labels or colons. Preprocessing must handle unlabelled text; the minutes prompt must not invent speakers or owners. |
+| 2026-10-15 | spaCy is unreliable on unpunctuated audio text (merged "John Priya", missed Rahul). Treat NER output as hints only; LLM decides final attendees; UI lets user edit them. |
 
 ## Issues / Blockers
 | Date | Issue | Resolution |
