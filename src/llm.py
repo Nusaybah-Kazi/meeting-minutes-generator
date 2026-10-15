@@ -26,7 +26,7 @@ def chat(
     model: str | None = None,
     temperature: float = 0.2,
     max_tokens: int = 2048,
-    retries: int = 3,
+    retries: int = 5,
     json_mode: bool = False,
 ) -> str:
     """Send one prompt to Groq and return the text reply, retrying on transient errors."""
@@ -59,7 +59,7 @@ def chat(
             time.sleep(2 ** (attempt + 1))
         except APIStatusError as e:
             if e.status_code >= 500 and attempt < retries - 1:
-                time.sleep(2 ** (attempt + 1))
+                time.sleep(min(30, 3 * 2 ** attempt))
                 continue
             raise
     raise RuntimeError("Groq request failed after retries.")

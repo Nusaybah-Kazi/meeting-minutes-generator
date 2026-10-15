@@ -1,0 +1,42 @@
+{
+  "title": "Project Sync",
+  "date": "14 October 2026",
+  "attendees": [
+    "Priya",
+    "Rahul",
+    "Meera",
+    "John"
+  ],
+  "agenda": [
+    "Website redesign",
+    "Budget",
+    "Launch timing"
+  ],
+  "summary": "The team reviewed the website redesign, noting that wireframes are complete and awaiting the final colour palette. Budget concerns were raised due to a 10% overage in cloud costs, leading to a decision to downgrade the staging server. Action items were assigned for Meera to provide the palette by Friday and for John to implement the server change by next Wednesday. The timing of the product launch relative to the festival sale remains unresolved and will be addressed in the next meeting.",
+  "discussion_points": [
+    "Wireframes for the website redesign are finished",
+    "Final colour palette is needed from Meera",
+    "Cloud costs are 10% over budget",
+    "Suggestion to move the staging server to a smaller plan",
+    "Open question about launching before or after the festival sale"
+  ],
+  "decisions": [
+    "Move the staging server to the smaller plan"
+  ],
+  "action_items": [
+    {
+      "task": "Send the final colour palette",
+      "owner": "Meera",
+      "due": "Friday"
+    },
+    {
+      "task": "Change the staging server to the smaller plan",
+      "owner": "John",
+      "due": "next Wednesday"
+    }
+  ],
+  "open_questions": [
+    "Should the product launch occur before or after the festival sale?"
+  ],
+  "next_meeting": "21 October"
+}

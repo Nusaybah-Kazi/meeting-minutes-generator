@@ -1,0 +1,23 @@
+{
+  "title": "Book Club Chat",
+  "date": "8 October 2026",
+  "attendees": [
+    "Anita",
+    "Vikram",
+    "Zoya"
+  ],
+  "agenda": [],
+  "summary": "The group met to discuss the novel they were reading. Anita asked if everyone had finished, and Vikram said he had read most of it but found the first half slow. Zoya praised the ending and the twist involving the lighthouse keeper. Anita noted the narrator seemed unreliable, and Vikram said he was still considering that aspect. Zoya compared the pacing to the author's earlier book, and the meeting concluded with a positive note on the discussion.",
+  "discussion_points": [
+    "Anita asked if everyone finished the novel",
+    "Vikram had read most of the book but found the first half dragged",
+    "Zoya loved the ending and the lighthouse keeper twist",
+    "Anita thought the narrator was unreliable from the start",
+    "Vikram was still thinking about the narrator issue",
+    "Zoya felt the author's earlier book had better pacing"
+  ],
+  "decisions": [],
+  "action_items": [],
+  "open_questions": [],
+  "next_meeting": null
+}

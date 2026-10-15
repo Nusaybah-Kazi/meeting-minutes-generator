@@ -1,0 +1,88 @@
+{
+  "title": "Quarterly Planning - 13 October 2026",
+  "date": "13 October 2026",
+  "attendees": [
+    "Ravi",
+    "Sunita",
+    "Marcus",
+    "Elena",
+    "Tom"
+  ],
+  "agenda": [
+    "hiring",
+    "Q4 roadmap",
+    "vendor contract",
+    "mobile redesign",
+    "reporting dashboard",
+    "API v2 migration"
+  ],
+  "summary": "The team reviewed hiring progress, approved a $500 referral bonus, and prioritized the Q4 roadmap. They decided to ship the reporting dashboard first, start the mobile redesign in November, and postpone the API v2 migration to next year. Vendor contract renewal will be decided after reviewing alternative quotes, with a fallback to renew if alternatives are not better. Action items were assigned for job description updates, interview scheduling, bonus announcement, roadmap updates, customer notifications, and vendor quote collection.",
+  "discussion_points": [
+    "Two open backend roles; pipeline thin",
+    "Six candidates interviewed for first role, none for second; second job description outdated",
+    "Referral bonus of $500 per successful hire approved",
+    "Q4 roadmap includes mobile redesign, reporting dashboard, and API v2 migration; cannot do all three",
+    "API migration risky because two customers still depend on v1",
+    "Dashboard chosen to ship first; API v2 migration postponed to next year; mobile redesign scheduled to start in November",
+    "Two v1 customers will be notified of the delay",
+    "Vendor contract renews on 1 December with decision deadline 15 November",
+    "Mobile team’s capacity for November remains an open question",
+    "Need to compare alternative vendor quotes before renewal decision"
+  ],
+  "decisions": [
+    "Referral bonus of $500 per successful hire approved",
+    "Dashboard will be shipped first",
+    "API v2 migration postponed to next year",
+    "Mobile redesign will start in November",
+    "Vendor contract renewal decision will be made after comparing alternatives",
+    "If alternatives are not better, renewal will proceed"
+  ],
+  "action_items": [
+    {
+      "task": "Rewrite second job description; provide draft by Thursday",
+      "owner": "Marcus",
+      "due": "Thursday"
+    },
+    {
+      "task": "Schedule at least four interviews for second backend role before end of month",
+      "owner": "Sunita",
+      "due": "end of month"
+    },
+    {
+      "task": "Announce referral bonus to engineering channel",
+      "owner": "Tom",
+      "due": "today"
+    },
+    {
+      "task": "Update roadmap document (Ravi)",
+      "owner": "Ravi",
+      "due": "Monday"
+    },
+    {
+      "task": "Update roadmap document (Elena)",
+      "owner": "Elena",
+      "due": "Monday"
+    },
+    {
+      "task": "Contact the two v1 customers about the delay",
+      "owner": "Tom",
+      "due": "next Tuesday"
+    },
+    {
+      "task": "Collect quotes from two alternative vendors",
+      "owner": "Marcus",
+      "due": "5 November"
+    },
+    {
+      "task": "Send the invite",
+      "owner": "Sunita",
+      "due": null
+    }
+  ],
+  "open_questions": [
+    "Mobile team’s capacity for November plan",
+    "Whether the alternative vendors are better than CloudNine",
+    "How to mitigate risk of API v2 migration given current customer dependencies?"
+  ],
+  "next_meeting": "6 November"
+}

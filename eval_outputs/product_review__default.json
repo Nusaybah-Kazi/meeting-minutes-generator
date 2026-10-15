@@ -1,0 +1,51 @@
+{
+  "title": "Product Review - 12 October 2026",
+  "date": "12 October 2026",
+  "attendees": [
+    "Neha",
+    "Arjun",
+    "Kabir",
+    "Leela"
+  ],
+  "agenda": [
+    "Beta feedback review",
+    "Search performance improvement",
+    "Export feature help article",
+    "Student discount pricing",
+    "Dark mode bug"
+  ],
+  "summary": "The team reviewed beta feedback and identified slow search as the main issue. They decided to add caching instead of changing the search engine and set a review deadline of 20 October. A help article for the export feature will be drafted in November, and the dark mode bug will be fixed by Friday. The discussion on a student discount was postponed to the next review.",
+  "discussion_points": [
+    "Users reported slow search performance, about three seconds on large accounts.",
+    "Options to address search speed included adding caching or switching search engines.",
+    "Support received many questions about the export feature and needs a help article.",
+    "Consideration of a student discount for pricing.",
+    "Ownership of the dark mode bug was clarified."
+  ],
+  "decisions": [
+    "Do not switch search engines at this time.",
+    "Add caching to improve search performance.",
+    "Defer writing the export feature help article until November."
+  ],
+  "action_items": [
+    {
+      "task": "Add caching and have it ready for review",
+      "owner": "Kabir",
+      "due": "20 October"
+    },
+    {
+      "task": "Draft help article for the export feature",
+      "owner": "Arjun",
+      "due": "November"
+    },
+    {
+      "task": "Fix the dark mode bug",
+      "owner": "Leela",
+      "due": "Friday"
+    }
+  ],
+  "open_questions": [
+    "Should a student discount be offered?"
+  ],
+  "next_meeting": "2 November"
+}

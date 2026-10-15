@@ -1,0 +1,26 @@
+{
+  "title": "Meeting Minutes",
+  "date": null,
+  "attendees": [
+    "Priya",
+    "Rahul"
+  ],
+  "agenda": [],
+  "summary": "The meeting began with Priya initiating the discussion. Rahul reported that the API development is complete with only testing remaining. Priya requested that Rahul finish testing by Monday. The meeting concluded after the request was made.",
+  "discussion_points": [
+    "API development status",
+    "Testing timeline"
+  ],
+  "decisions": [
+    "Testing will be completed by Monday"
+  ],
+  "action_items": [
+    {
+      "task": "Finish testing of the API",
+      "owner": "Rahul",
+      "due": "Monday"
+    }
+  ],
+  "open_questions": [],
+  "next_meeting": null
+}

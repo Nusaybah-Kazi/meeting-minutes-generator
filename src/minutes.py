@@ -38,7 +38,8 @@ RULES = """Rules:
 - Speaker labels may be missing (audio transcripts). Never guess who said what.
 - The participants hint may contain errors; list only people who are actually in the meeting.
 - Use neutral, professional, past-tense language. Be concise.
-- decisions: only things the group explicitly agreed or chose. A task given to a person is an action item, not a decision. A topic postponed to a later meeting is an open question, not a decision.
+- decisions: only choices the group made about WHAT to do or not do (approvals, rejections, priorities, policies, changes of plan). NEVER write a decision in the form "<Person> will <do something>": that is an action item and belongs only in action_items. Scheduling a follow-up meeting belongs only in next_meeting, never in decisions or action_items. A topic postponed to a later meeting is an open question, not a decision. An idea someone is unsure about is not a decision.
+- Passive-voice tasks are still tasks: "Customers will be informed", "Caching will be implemented", "The article will be drafted" belong only in action_items. If a task is already in action_items, never repeat it in decisions. A date on which something "will be decided" is scheduling, not a decision. If the group changed its mind during the meeting, record only the final outcome, never the earlier position.
 - action_items: only concrete tasks someone was assigned or volunteered for. Never list "decide X later" as an action item.
 - Put each item in exactly one section; do not repeat it across decisions, action_items and open_questions.
 - A need or mention ("we still need X from Y") is not an action item unless someone was assigned the task or agreed to do it. Never infer an owner.
@@ -63,7 +64,7 @@ MINUTES_TEMPLATE = """{
   "agenda": [string],
   "summary": string (3 to 5 sentences),
   "discussion_points": [string],
-  "decisions": [string],
+  "decisions": [string] (group choices only; never "<Person> will ..." tasks; never meeting scheduling),
   "action_items": [{"task": string, "owner": string or null, "due": string or null}],
   "open_questions": [string],
   "next_meeting": string or null

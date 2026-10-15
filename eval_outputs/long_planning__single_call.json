@@ -1,0 +1,70 @@
+{
+  "title": "Quarterly Planning",
+  "date": "13 October 2026",
+  "attendees": [
+    "Ravi",
+    "Sunita",
+    "Marcus",
+    "Elena",
+    "Tom"
+  ],
+  "agenda": [
+    "Hiring",
+    "Q4 roadmap",
+    "Vendor contract"
+  ],
+  "summary": "The team reviewed hiring needs, approved a $500 referral bonus, and assigned interview scheduling. They prioritized the Q4 roadmap, deciding to deliver the reporting dashboard first, start the mobile redesign in November, and postpone the API v2 migration to Q1. For the CloudNine contract, they agreed to obtain alternative quotes before making a renewal decision and scheduled a follow-up meeting.",
+  "discussion_points": [
+    "Hiring: two open backend roles, six candidates interviewed for the first role, none for the second; job description for the second role is outdated.",
+    "Referral bonus proposal of $500 per successful hire was discussed and approved.",
+    "Q4 roadmap items: mobile redesign, reporting dashboard, API v2 migration; decision to prioritize dashboard, start mobile redesign in November, and postpone API v2 to Q1.",
+    "Need to inform two v1 customers about the API delay.",
+    "Vendor contract renewal on 1 December; price increase of 12%; legal requires decision by 15 November; plan to compare at least two alternative vendors."
+  ],
+  "decisions": [
+    "Referral bonus of $500 per successful hire approved.",
+    "API v2 migration postponed to Q1; the reporting dashboard will be delivered first, and the mobile redesign will start in November.",
+    "The team will compare at least two alternative vendors before deciding on the CloudNine contract renewal."
+  ],
+  "action_items": [
+    {
+      "task": "Rewrite the job description for the second backend role",
+      "owner": "Marcus",
+      "due": "Thursday"
+    },
+    {
+      "task": "Schedule at least four interviews for the second backend role before the end of the month",
+      "owner": "Sunita",
+      "due": "end of the month"
+    },
+    {
+      "task": "Announce the referral bonus to the engineering channel",
+      "owner": "Tom",
+      "due": "today"
+    },
+    {
+      "task": "Update the roadmap document",
+      "owner": "Elena",
+      "due": "Monday"
+    },
+    {
+      "task": "Email the two v1 customers about the API delay",
+      "owner": "Tom",
+      "due": "next Tuesday"
+    },
+    {
+      "task": "Collect quotes from two alternative vendors for the CloudNine contract",
+      "owner": "Marcus",
+      "due": "5 November"
+    },
+    {
+      "task": "Send the invite for the follow-up meeting on 6 November",
+      "owner": "Sunita",
+      "due": null
+    }
+  ],
+  "open_questions": [
+    "What is the mobile team's capacity given their support ticket workload?"
+  ],
+  "next_meeting": "6 November"
+}

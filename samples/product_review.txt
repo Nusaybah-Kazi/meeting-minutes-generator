@@ -1,0 +1,17 @@
+Product Review - 12 October 2026
+Attendees: Neha, Arjun, Kabir, Leela
+
+Neha: Let's review the beta feedback. Arjun, what are users saying?
+Arjun: Mostly good. The top complaint is slow search, around three seconds on large accounts.
+Kabir: We could add caching. Or maybe move to a different search engine, but that's a big change.
+Neha: Let's not switch engines now. Kabir, please add caching and have it ready for review by 20 October.
+Kabir: Okay, 20 October.
+Leela: Separately, support is getting a lot of questions about the export feature. Someone should write a help article.
+Neha: Good idea. Nobody has the time this week, so let's park it.
+Arjun: Actually I can draft the article, but not before November.
+Neha: Fine, Arjun drafts it in November.
+Leela: On pricing, I think we should consider a student discount. I'm not sure yet.
+Neha: Let's talk about that in the next review. Kabir, you also own the dark mode bug, right?
+Kabir: No, that's Leela's.
+Leela: Yes, I'll fix the dark mode bug by Friday.
+Neha: Great. Next review is 2 November.

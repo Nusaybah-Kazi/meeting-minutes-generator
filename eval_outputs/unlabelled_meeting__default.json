@@ -1,0 +1,40 @@
+{
+  "title": "Tuesday standup for the mobile team",
+  "date": null,
+  "attendees": [
+    "Sam",
+    "Dana"
+  ],
+  "agenda": [
+    "Login bug fix",
+    "Release notes update",
+    "Payments integration status"
+  ],
+  "summary": "The team reviewed the login bug, confirming it was fixed and merged. Sam committed to updating the release notes by tomorrow noon. Dana reported that the payments integration is blocked awaiting sandbox keys from the bank and will email the bank again today. The group agreed to escalate to the account manager if the keys are not received by Thursday. The meeting concluded with a reminder of the next standup tomorrow.",
+  "discussion_points": [
+    "Login bug has been fixed and merged",
+    "Release notes need to be updated",
+    "Payments integration is blocked awaiting sandbox keys from the bank",
+    "Dana will email the bank again today",
+    "Escalation plan if keys are not received by Thursday"
+  ],
+  "decisions": [
+    "Escalate to the account manager if sandbox keys are not received by Thursday"
+  ],
+  "action_items": [
+    {
+      "task": "Update the release notes",
+      "owner": "Sam",
+      "due": "tomorrow noon"
+    },
+    {
+      "task": "Email the bank again to request sandbox keys",
+      "owner": "Dana",
+      "due": "today"
+    }
+  ],
+  "open_questions": [
+    "Will the bank provide the sandbox keys in time"
+  ],
+  "next_meeting": "tomorrow"
+}

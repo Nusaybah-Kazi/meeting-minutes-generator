@@ -1,0 +1,32 @@
+Quarterly Planning - 13 October 2026
+Attendees: Ravi, Sunita, Marcus, Elena, Tom
+
+Ravi: Welcome everyone. We have three topics today: hiring, the Q4 roadmap, and the vendor contract.
+Sunita: Starting with hiring. We have two open backend roles and the pipeline is thin.
+Ravi: How many candidates have we interviewed so far?
+Sunita: Six for the first role, none for the second. The second job description is outdated.
+Marcus: I can rewrite the job description. I'll have a draft by Thursday.
+Ravi: Good. Sunita, please schedule at least four interviews for the second role before the end of the month.
+Sunita: Will do.
+Elena: Can we also agree to offer a referral bonus? It worked well last year.
+Ravi: Yes, approved. A bonus of 500 dollars per successful hire.
+Tom: I'll announce the bonus to the engineering channel today.
+Ravi: Moving on to the Q4 roadmap. Elena, where do we stand?
+Elena: Three big items: the mobile redesign, the reporting dashboard, and the API v2 migration. We can't do all three.
+Marcus: The API migration is risky. Two customers still depend on v1.
+Elena: Right. My proposal is to ship the dashboard first, start the mobile redesign in November, and postpone API v2 to next year.
+Tom: Postponing is fine with me, but we need to tell the two v1 customers.
+Ravi: Agreed. We postpone API v2 to Q1. Dashboard first, then mobile.
+Elena: I'll update the roadmap document by Monday.
+Ravi: Tom, can you contact the two v1 customers about the delay?
+Tom: Yes, I'll email them by next Tuesday.
+Marcus: What about the mobile team's capacity? They're also handling support tickets.
+Ravi: Good question. Let's leave that open until we see the November plan.
+Ravi: Last topic, the vendor contract with CloudNine. It renews on 1 December.
+Sunita: Legal wants our decision by 15 November. Their price went up 12 percent.
+Marcus: We should compare at least two other vendors before deciding.
+Ravi: Agreed. Marcus, collect quotes from two alternatives by 5 November.
+Marcus: Okay.
+Ravi: If the alternatives aren't better, we renew. Let's reconvene on 6 November to decide.
+Sunita: I'll send the invite.
+Ravi: Thanks all. That's it.
