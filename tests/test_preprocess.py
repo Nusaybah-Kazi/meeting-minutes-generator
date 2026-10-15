@@ -63,3 +63,10 @@ def test_long_single_line_is_split():
 def test_bad_overlap_raises():
     with pytest.raises(ValueError):
         chunk_text("x", max_chars=100, overlap_chars=100)
+
+def test_prepare_transcript_clamps_overlap_for_small_chunks():
+    from src.preprocess import prepare_transcript
+
+    text = "\n".join(f"Priya: spoken line {i} " + "word " * 10 for i in range(20))
+    prep = prepare_transcript(text, max_chars=300)  # default overlap would be too big
+    assert len(prep["chunks"]) > 1

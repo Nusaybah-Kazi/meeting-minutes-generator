@@ -1,6 +1,12 @@
 import time
 
-from groq import APIConnectionError, APIStatusError, Groq, RateLimitError
+from groq import (
+    APIConnectionError,
+    APIStatusError,
+    BadRequestError,
+    Groq,
+    RateLimitError,
+)
 
 from src import config
 
@@ -21,6 +27,7 @@ def chat(
     temperature: float = 0.2,
     max_tokens: int = 2048,
     retries: int = 3,
+    json_mode: bool = False,
 ) -> str:
     """Send one prompt to Groq and return the text reply, retrying on transient errors."""
     model = model or config.LLM_MODEL
@@ -30,14 +37,22 @@ def chat(
     ]
 
     for attempt in range(retries):
+        kwargs = dict(
+            model=model,
+            messages=messages,
+            temperature=temperature,
+            max_tokens=max_tokens,
+        )
+        if json_mode:
+            kwargs["response_format"] = {"type": "json_object"}
         try:
-            resp = get_client().chat.completions.create(
-                model=model,
-                messages=messages,
-                temperature=temperature,
-                max_tokens=max_tokens,
-            )
-            return resp.choices[0].message.content
+            resp = get_client().chat.completions.create(**kwargs)
+            return resp.choices[0].message.content or ""
+        except BadRequestError:
+            if json_mode:
+                json_mode = False  # JSON mode rejected; retry as plain text
+                continue
+            raise
         except (RateLimitError, APIConnectionError):
             if attempt == retries - 1:
                 raise
@@ -47,3 +62,4 @@ def chat(
                 time.sleep(2 ** (attempt + 1))
                 continue
             raise
+    raise RuntimeError("Groq request failed after retries.")

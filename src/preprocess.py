@@ -142,9 +142,10 @@ def chunk_text(text: str, max_chars: int = 6000, overlap_chars: int = 300) -> li
 def prepare_transcript(text: str, max_chars: int = 6000, overlap_chars: int = 300) -> dict:
     cleaned = clean_text(text)
     turns = parse_turns(cleaned)
+    overlap = min(overlap_chars, max_chars // 5)  # overlap can never exceed 20% of a chunk
     return {
         "clean_text": cleaned,
         "turns": turns,
         "speakers": get_speakers(turns),
-        "chunks": chunk_text(cleaned, max_chars, overlap_chars),
+        "chunks": chunk_text(cleaned, max_chars, overlap),
     }
