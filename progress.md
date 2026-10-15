@@ -48,15 +48,22 @@ meeting-minutes-generator/
 
 ---
 
-## Phase 0: Environment & Repo Setup
-- [ ] Install Python 3.10+, Git, VS Code
-- [ ] Create GitHub repo `meeting-minutes-generator` (public, with README + Python .gitignore)
-- [ ] Clone it, open in VS Code
-- [ ] Create and activate virtual environment
-- [ ] Create Groq account (free, no card) and generate API key
-- [ ] Create `.env` with the key, confirm `.env` is git-ignored
-- [ ] Create folder structure + `requirements.txt`
-- [ ] Install dependencies, first commit and push
+##SETUP
+uv venv --python 3.11
+.venv\Scripts\activate
+uv pip install -r requirements.txt
+uv pip install pip
+python -m spacy download en_core_web_sm
+
+## Phase 0: Environment & Repo Setup ✅
+- [x] Install Python 3.10+, Git, VS Code (using uv-managed Python 3.11)
+- [x] Create GitHub repo `meeting-minutes-generator` (public, with README + Python .gitignore)
+- [x] Clone it, open in VS Code
+- [x] Create and activate virtual environment (uv, `.venv`)
+- [x] Create Groq account (free, no card) and generate API key
+- [x] Create `.env` with the key, confirm `.env` is git-ignored
+- [x] Create folder structure + `requirements.txt`
+- [x] Install dependencies, first commit and push
 
 **Validation checkpoint:** share `git log --oneline`, `pip list` (short), and confirm `.env` is NOT in the repo.
 
@@ -147,9 +154,11 @@ meeting-minutes-generator/
 ## Notes / Decisions Log
 | Date | Note |
 |------|------|
-|      |      |
+| 2026-10-15 | Switched from conda to uv for the environment (conda env had no pip, so installs fell back to system Python 3.9). Python 3.11 via `uv venv`. |
+| 2026-10-15 | Always install with `uv pip install ...` or `python -m pip install ...`, never bare `pip`. |
 
 ## Issues / Blockers
 | Date | Issue | Resolution |
 |------|-------|------------|
 |      |       |            |
+| 2026-10-15 | spaCy install failed on Python 3.9 (thinc version not found) | Used Python 3.11 in a uv venv |
