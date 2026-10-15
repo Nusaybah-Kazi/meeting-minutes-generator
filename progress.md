@@ -69,11 +69,11 @@ python -m spacy download en_core_web_sm
 
 ---
 
-## Phase 1: Groq Connectivity
-- [ ] `src/config.py` loads `GROQ_API_KEY` via python-dotenv
-- [ ] `src/llm.py` with a `chat()` helper (retry + error handling)
-- [ ] Smoke test script prints a model response
-- [ ] Check available model names in the Groq console and pin them in `config.py`
+## Phase 1: Groq Connectivity ✅
+- [x] `src/config.py` loads `GROQ_API_KEY` via python-dotenv
+- [x] `src/llm.py` with a `chat()` helper (retry + error handling)
+- [x] Smoke test script prints a model response
+- [x] Check available model names in the Groq console and pin them in `config.py`
 
 **Validation checkpoint:** share the smoke test output.
 
@@ -156,9 +156,11 @@ python -m spacy download en_core_web_sm
 |------|------|
 | 2026-10-15 | Switched from conda to uv for the environment (conda env had no pip, so installs fell back to system Python 3.9). Python 3.11 via `uv venv`. |
 | 2026-10-15 | Always install with `uv pip install ...` or `python -m pip install ...`, never bare `pip`. |
+| 2026-10-15 | Groq retires models often, so model names live only in `src/config.py`. Run `python list_models.py` if a 404 appears. |
 
 ## Issues / Blockers
 | Date | Issue | Resolution |
 |------|-------|------------|
 |      |       |            |
 | 2026-10-15 | spaCy install failed on Python 3.9 (thinc version not found) | Used Python 3.11 in a uv venv |
+| 2026-10-15 | `llama-3.3-70b-versatile` returned 404 model_not_found | Listed models with `list_models.py`; switched to `openai/gpt-oss-120b` (main), `gpt-oss-20b` (fast), `whisper-large-v3-turbo` |

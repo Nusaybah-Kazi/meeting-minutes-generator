@@ -1,0 +1,11 @@
+Project Sync - 14 October 2026
+Attendees: Priya, Rahul, Meera, John
+
+Priya: Let's start with the website redesign. Where are we?
+Rahul: The wireframes are done. We still need the final colour palette from Meera.
+Meera: I can send the palette by Friday.
+Priya: Good. Next, the budget. John, any update?
+John: We're 10 percent over on cloud costs. I suggest moving the staging server to the smaller plan.
+Priya: Agreed, let's do that. John, please make the change by next Wednesday.
+Rahul: One open question: do we launch before or after the festival sale?
+Priya: Let's decide that in the next meeting. We'll meet again on 21 October.
