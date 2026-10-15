@@ -100,24 +100,21 @@ python -m spacy download en_core_web_sm
 
 ---
 
-## Phase 4: Minutes Generation (core)
-- [ ] Design JSON schema: title, date, attendees, agenda, summary, discussion points, decisions, action items (owner, task, due), open questions
-- [ ] Prompt for per-chunk notes (map step)
-- [ ] Prompt to merge into final minutes (reduce step)
-- [ ] Force/validate JSON output (parse + retry on failure)
-- [ ] Pydantic validation of the result
-- [ ] Tests with a mocked LLM
+## Phase 4: Minutes Generation (core) ✅
+- [x] Design JSON schema: title, date, attendees, agenda, summary, discussion points, decisions, action items (owner, task, due), open questions
+- [x] Prompt for per-chunk notes (map step)
+- [x] Prompt to merge into final minutes (reduce step)
+- [x] Force/validate JSON output (parse + retry on failure)
+- [x] Pydantic validation of the result
+- [x] Tests with a mocked LLM
 
-**Validation checkpoint:** share generated JSON for a sample transcript.
-
----
-
-## Phase 5: Streamlit Frontend
-- [ ] `app.py`: upload (audio/text) or paste transcript
-- [ ] Sidebar: model choice, meeting title/date, language
-- [ ] Progress spinner and error messages
-- [ ] Render minutes in sections (summary, decisions, action items table)
-- [ ] Editable output before export
+## Phase 5: Streamlit Frontend ✅
+- [x] `app.py`: upload (audio/text) or paste transcript
+- [x] Sidebar: meeting title/date/attendees, audio language
+- [x] Progress status and error messages
+- [x] Render minutes in sections (summary, decisions, action items table)
+- [x] Editable output before export
+- [ ] (deferred) model choice in sidebar
 
 **Validation checkpoint:** screenshot of the running app.
 
@@ -159,6 +156,10 @@ python -m spacy download en_core_web_sm
 | 2026-10-15 | Groq retires models often, so model names live only in `src/config.py`. Run `python list_models.py` if a 404 appears. |
 | 2026-10-15 | Whisper output has no speaker labels or colons. Preprocessing must handle unlabelled text; the minutes prompt must not invent speakers or owners. |
 | 2026-10-15 | spaCy is unreliable on unpunctuated audio text (merged "John Priya", missed Rahul). Treat NER output as hints only; LLM decides final attendees; UI lets user edit them. |
+| 2026-10-15 | Chunk notes must carry title/date/attendees/agenda/next_meeting, otherwise map-reduce drops the transcript header. |
+| 2026-10-15 | gpt-oss output can contain odd Unicode spaces (glued words); `normalize_text()` cleans every model reply. |
+| 2026-10-15 | Prompt rules: each item belongs in exactly one section; a "need" is not an action item; never infer owners. |
+| 2026-10-15 | Phase 7 TODO: agenda from map-reduce can be thin ("palette", "budget"); check decisions vs action-item overlap across more transcripts. |
 
 ## Issues / Blockers
 | Date | Issue | Resolution |
@@ -166,3 +167,4 @@ python -m spacy download en_core_web_sm
 |      |       |            |
 | 2026-10-15 | spaCy install failed on Python 3.9 (thinc version not found) | Used Python 3.11 in a uv venv |
 | 2026-10-15 | `llama-3.3-70b-versatile` returned 404 model_not_found | Listed models with `list_models.py`; switched to `openai/gpt-oss-120b` (main), `gpt-oss-20b` (fast), `whisper-large-v3-turbo` |
+| 2026-10-15 | `chunk_text` raised ValueError when max_chars <= default overlap | `prepare_transcript` clamps overlap to max_chars // 5 |
