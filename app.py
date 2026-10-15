@@ -8,6 +8,7 @@ from src.ingest import SUPPORTED_EXTS, load_transcript
 from src.minutes import generate_minutes
 from src.schema import ActionItem, Minutes
 from src.transcribe import AUDIO_EXTS, transcribe_audio
+from src.export import minutes_to_docx, minutes_to_markdown, safe_filename
 
 st.set_page_config(page_title="Meeting Minutes Generator", page_icon="📝", layout="wide")
 st.title("📝 Meeting Minutes Generator")
@@ -148,3 +149,22 @@ if minutes is not None:
     with st.expander("Transcript used"):
         st.text_area("Transcript", st.session_state["transcript"], height=250, disabled=True,
                      label_visibility="collapsed")
+        st.divider()
+    st.subheader("Export")
+    final = st.session_state["edited"]
+    base = safe_filename(final.title)
+    d1, d2 = st.columns(2)
+    d1.download_button(
+        "⬇️ Download Markdown",
+        data=minutes_to_markdown(final),
+        file_name=f"{base}.md",
+        mime="text/markdown",
+    )
+    d2.download_button(
+        "⬇️ Download Word (.docx)",
+        data=minutes_to_docx(final),
+        file_name=f"{base}.docx",
+        mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    )
+    with st.expander("Markdown preview"):
+        st.markdown(minutes_to_markdown(final))
